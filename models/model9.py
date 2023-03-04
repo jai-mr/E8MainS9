@@ -12,9 +12,9 @@ This is then projected back into the original space using another linear transfo
 class UltimusBlock(nn.Module):
     def __init__(self, in_channels):
         super(UltimusBlock, self).__init__()
-        self.fc_k = nn.Linear(in_channels, in_channels//6)
-        self.fc_q = nn.Linear(in_channels, in_channels//6)
-        self.fc_v = nn.Linear(in_channels, in_channels//6)
+        self.fc_k = nn.Linear(in_channels, in_channels)
+        self.fc_q = nn.Linear(in_channels, in_channels)
+        self.fc_v = nn.Linear(in_channels, in_channels)
         self.softmax = nn.Softmax(dim=-1)
         self.fc_out = nn.Linear(in_channels//6, in_channels)
         
